@@ -26,7 +26,7 @@ const Projects = ({ projects }: { projects: IProject[] }) => {
         </div>
       ) : (
         <p className={cn('mt-5')}>
-          I don't have any open projects at the moment.
+          I don&apos;t have any open projects at the moment.
         </p>
       )}
     </div>
