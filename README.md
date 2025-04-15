@@ -1,6 +1,6 @@
 # Personal website
 
-This is my personal website made with [Next.js](https://nextjs.org/) and deployed on [Vercel](https://vercel.com/).
+This is my personal website build with [Next.js](https://nextjs.org/) and deployed on [Vercel](https://vercel.com/).
 
 ## Setup
 
