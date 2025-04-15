@@ -15,4 +15,4 @@ pnpm dev
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/alexf0xdev/website/blob/main/LICENSE) file for details.
