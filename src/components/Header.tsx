@@ -7,12 +7,16 @@ const Header = () => {
       <Link className={cn('text-3xl font-semibold')} href='/'>
         AlexF0x
       </Link>
-      <div className={cn('flex gap-5')}>
-        <Link href='/'>Home</Link>
-        <Link href='https://github.com/alexf0xdev' external>
-          GitHub
-        </Link>
-      </div>
+      <ul className={cn('flex gap-5')}>
+        <li>
+          <Link href='/'>Home</Link>
+        </li>
+        <li>
+          <Link href='https://github.com/alexf0xdev' external>
+            GitHub
+          </Link>
+        </li>
+      </ul>
     </header>
   )
 }
