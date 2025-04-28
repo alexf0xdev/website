@@ -1,52 +1,52 @@
 import { cn } from '@/lib/utils'
-import { ILanguageColors, IProject } from '@/types/github'
+import { ILanguageColors, IRepository } from '@/types/github'
 import { FC } from 'react'
 import { FaGithub } from 'react-icons/fa6'
 import { TbGitFork, TbLink, TbStar } from 'react-icons/tb'
 import Button from './Button'
 
 interface IProjectCard {
-  project: IProject
+  repository: IRepository
   languageColors: ILanguageColors | undefined
 }
 
-const ProjectCard: FC<IProjectCard> = ({ project, languageColors }) => {
+const ProjectCard: FC<IProjectCard> = ({ repository, languageColors }) => {
   return (
     <div className={cn('bg-zinc-800 p-5')}>
-      <h3 className={cn('text-2xl font-semibold')}>{project.name}</h3>
-      {project.description && <p>{project.description}</p>}
+      <h3 className={cn('text-2xl font-semibold')}>{repository.name}</h3>
+      {repository.description && <p>{repository.description}</p>}
       <div className={cn('flex gap-4 mt-2')}>
-        {project.language && (
+        {repository.language && (
           <div className={cn('flex items-center gap-2')}>
             <div
               className={cn('w-3 h-3 rounded-full')}
               style={{
                 backgroundColor: languageColors
-                  ? languageColors[project.language].color
+                  ? languageColors[repository.language].color
                   : '#ffffff',
               }}
             />
-            {project.language}
+            {repository.language}
           </div>
         )}
         <div className={cn('flex items-center gap-2')}>
           <TbStar className={cn('w-5 h-5')} />
-          {project.stargazers_count}
+          {repository.starsCount}
         </div>
         <div className={cn('flex items-center gap-2')}>
           <TbGitFork className={cn('w-5 h-5')} />
-          {project.forks_count}
+          {repository.forksCount}
         </div>
       </div>
       <div className={cn('flex flex-col sm:flex-row gap-2 mt-3')}>
-        <Button icon={FaGithub} href={project.html_url} external>
+        <Button icon={FaGithub} href={repository.url} external>
           View on GitHub
         </Button>
-        {project.homepage && (
+        {repository.homepage && (
           <Button
             variant='secondaryLight'
             icon={TbLink}
-            href={project.homepage}
+            href={repository.homepage}
             external
           >
             Direct link

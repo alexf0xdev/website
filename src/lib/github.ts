@@ -1,12 +1,21 @@
-import { ILanguageColors, IProject } from '@/types/github'
+import { ILanguageColors, IRepository } from '@/types/github'
 import axios from 'axios'
 
-export const getUserRepos = async (username: string): Promise<IProject[]> => {
+export const getRepositories = async (): Promise<IRepository[]> => {
   const { data } = await axios.get(
-    `https://api.github.com/users/${username}/repos`,
+    `https://api.github.com/users/alexf0xdev/repos`,
   )
 
-  return data
+  return data.map((item: any) => ({
+    name: item.name,
+    description: item.description,
+    language: item.language,
+    url: item.html_url,
+    homepage: item.homepage,
+    fork: item.fork,
+    starsCount: item.stargazers_count,
+    forksCount: item.forks_count,
+  }))
 }
 
 export const getLanguageColors = async (): Promise<ILanguageColors> => {

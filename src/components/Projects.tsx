@@ -2,24 +2,24 @@
 
 import { getLanguageColors } from '@/lib/github'
 import { cn } from '@/lib/utils'
-import { IProject } from '@/types/github'
+import { IRepository } from '@/types/github'
 import useSWR from 'swr'
 import ProjectCard from './ProjectCard'
 
-const Projects = ({ projects }: { projects: IProject[] }) => {
-  const { data: languageColors } = useSWR('languageColors', getLanguageColors)
+const Projects = ({ repositories }: { repositories: IRepository[] }) => {
+  const { data: languageColors } = useSWR('language-colors', getLanguageColors)
 
   return (
     <div className={cn('mt-32')}>
       <h2 className={cn('text-3xl font-semibold')}>My projects</h2>
-      {projects.length ? (
+      {repositories.length ? (
         <div className={cn('grid gap-5 mt-5')}>
-          {projects
-            .filter((project) => !project.fork)
-            .map((project, index) => (
+          {repositories
+            .filter((repository) => !repository.fork)
+            .map((repository, index) => (
               <ProjectCard
                 key={index}
-                project={project}
+                repository={repository}
                 languageColors={languageColors}
               />
             ))}
