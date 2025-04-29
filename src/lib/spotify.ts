@@ -32,12 +32,11 @@ export const getCurrentlyPlaying =
       { headers: { Authorization: `Bearer ${accessToken}` } },
     )
 
-    if (!data) return null
+    if (!data || !data.is_playing) return null
 
     return {
       name: data.item.name,
       artists: data.item.artists.map((artist: any) => artist.name).join(', '),
       imageUrl: data.item.album.images[0].url,
-      isPlaying: data.is_playing,
     }
   }
