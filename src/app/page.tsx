@@ -4,15 +4,21 @@ import ListeningNow from '@/components/ListeningNow'
 import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import { getRepositories } from '@/lib/github'
+import { getCurrentlyPlaying } from '@/lib/spotify'
+import { unstable_noStore } from 'next/cache'
 
 const Home = async () => {
-  const repositories = await getRepositories()
+  unstable_noStore()
 
+  const [currentlyPlaying, repositories] = await Promise.all([
+    getCurrentlyPlaying(),
+    getRepositories(),
+  ])
   return (
     <>
       <Hero />
       <Skills />
-      <ListeningNow />
+      <ListeningNow initialCurrentlyPlaying={currentlyPlaying} />
       <Projects repositories={repositories} />
       <Contact />
     </>

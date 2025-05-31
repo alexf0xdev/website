@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import { ILanguageColors, IRepository } from '@/types/github'
+import { ILanguageColor, IRepository } from '@/types/github'
 import { FC } from 'react'
 import { FaGithub } from 'react-icons/fa6'
 import { TbGitFork, TbLink, TbStar } from 'react-icons/tb'
@@ -7,7 +7,7 @@ import Button from './Button'
 
 interface IProjectCard {
   repository: IRepository
-  languageColors: ILanguageColors | undefined
+  languageColors: Record<string, ILanguageColor> | undefined
 }
 
 const ProjectCard: FC<IProjectCard> = ({ repository, languageColors }) => {

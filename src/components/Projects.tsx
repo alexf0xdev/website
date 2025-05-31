@@ -16,6 +16,7 @@ const Projects = ({ repositories }: { repositories: IRepository[] }) => {
         <div className={cn('grid gap-5 mt-5')}>
           {repositories
             .filter((repository) => !repository.fork)
+            .sort((a, b) => b.starsCount - a.starsCount)
             .map((repository, index) => (
               <ProjectCard
                 key={index}

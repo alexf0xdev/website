@@ -5,16 +5,18 @@ import { ICurrentlyPlaying } from '@/types/spotify'
 import Image from 'next/image'
 import useSWR from 'swr'
 
-const ListeningNow = () => {
-  const { data: currentlyPlaying, isLoading } = useSWR<ICurrentlyPlaying>(
+const ListeningNow = ({
+  initialCurrentlyPlaying,
+}: {
+  initialCurrentlyPlaying: ICurrentlyPlaying | null
+}) => {
+  const { data: currentlyPlaying } = useSWR<ICurrentlyPlaying>(
     '/api/spotify',
     fetcher,
-    { refreshInterval: 1000 },
+    { refreshInterval: 1000, fallbackData: initialCurrentlyPlaying! },
   )
 
-  if (isLoading || !currentlyPlaying) {
-    return null
-  }
+  if (!currentlyPlaying) return null
 
   return (
     <div className={cn('relative bg-zinc-800 p-5 mt-10')}>
@@ -22,11 +24,10 @@ const ListeningNow = () => {
       <div className={cn('flex items-center gap-5 mt-2')}>
         <div className='relative h-12 sm:h-15 w-12 sm:w-15'>
           <Image
-            className={cn('bg-zinc-700/50')}
+            className={cn('bg-zinc-700/50 object-cover')}
             src={currentlyPlaying.imageUrl}
-            layout='fill'
-            objectFit='cover'
             alt='Track image'
+            fill
           />
         </div>
         <div>

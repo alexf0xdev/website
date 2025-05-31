@@ -9,9 +9,7 @@ export interface IRepository {
   forksCount: number
 }
 
-export interface ILanguageColors {
-  [language: string]: {
-    color: string
-    url: string
-  }
+export interface ILanguageColor {
+  color: string
+  url: string
 }

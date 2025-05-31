@@ -2,9 +2,7 @@ import { ICurrentlyPlaying } from '@/types/spotify'
 import axios from 'axios'
 
 export const getAccessToken = async () => {
-  const basic = Buffer.from(
-    `${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`,
-  ).toString('base64')
+  const basic = getBasicToken()
 
   const { data } = await axios.post(
     'https://accounts.spotify.com/api/token',
@@ -40,3 +38,9 @@ export const getCurrentlyPlaying =
       imageUrl: data.item.album.images[0].url,
     }
   }
+
+const getBasicToken = () => {
+  const credentials = `${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`
+
+  return Buffer.from(credentials).toString('base64')
+}
