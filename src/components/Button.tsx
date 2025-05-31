@@ -23,7 +23,7 @@ const sizes = {
 const variants = {
   primary: 'bg-orange-600 hover:bg-orange-700',
   secondary: 'bg-zinc-800 hover:bg-zinc-700',
-  secondaryLight: 'bg-zinc-700 hover:bg-zinc-700/50',
+  secondaryLight: 'bg-zinc-700/50 hover:bg-zinc-700',
 }
 
 const Button: FC<IButton> = ({
@@ -39,7 +39,7 @@ const Button: FC<IButton> = ({
   children,
 }) => {
   const className = cn(
-    'flex justify-center font-medium cursor-pointer',
+    'flex justify-center font-medium cursor-pointer rounded-md',
     fullSize && 'w-full',
     Icon && 'items-center gap-2',
     variants[variant],

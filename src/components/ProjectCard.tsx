@@ -12,7 +12,7 @@ interface IProjectCard {
 
 const ProjectCard: FC<IProjectCard> = ({ repository, languageColors }) => {
   return (
-    <div className={cn('bg-zinc-800 p-5')}>
+    <div className={cn('bg-zinc-800 p-5 rounded-md')}>
       <h3 className={cn('text-2xl font-semibold')}>{repository.name}</h3>
       {repository.description && <p>{repository.description}</p>}
       <div className={cn('flex gap-4 mt-2')}>
@@ -39,12 +39,18 @@ const ProjectCard: FC<IProjectCard> = ({ repository, languageColors }) => {
         </div>
       </div>
       <div className={cn('flex flex-col sm:flex-row gap-2 mt-3')}>
-        <Button icon={FaGithub} href={repository.url} external>
+        <Button
+          icon={FaGithub}
+          className='rounded-sm'
+          href={repository.url}
+          external
+        >
           View on GitHub
         </Button>
         {repository.homepage && (
           <Button
             variant='secondaryLight'
+            className='rounded-sm'
             icon={TbLink}
             href={repository.homepage}
             external

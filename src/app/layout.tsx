@@ -3,16 +3,16 @@ import Header from '@/components/Header'
 import ScrollTop from '@/components/ScrollTop'
 import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
-import { Roboto_Mono } from 'next/font/google'
+import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const robotoMono = Roboto_Mono({
+const jetBrainsMono = JetBrains_Mono({
   subsets: ['latin'],
 })
 
 export const metadata: Metadata = {
   title: {
-    default: 'AlexF0x',
+    default: 'AlexF0x - main page',
     template: '%s - AlexF0x',
   },
   description: 'Personal website',
@@ -28,11 +28,11 @@ export default function RootLayout({
       <body
         className={cn(
           'bg-zinc-900 text-white text-lg antialiased',
-          robotoMono.className,
+          jetBrainsMono.className,
         )}
       >
         <div
-          className={cn('flex flex-col min-h-screen max-w-4xl mx-auto px-4')}
+          className={cn('flex flex-col min-h-screen max-w-4xl mx-auto px-5')}
         >
           <Header />
           <main className={cn('flex-1')}>{children}</main>
