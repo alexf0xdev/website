@@ -22,7 +22,7 @@ const sizes = {
 
 const variants = {
   primary: 'bg-orange-600 hover:bg-orange-700',
-  secondary: 'bg-zinc-800 hover:bg-zinc-700',
+  secondary: 'bg-neutral-800 hover:bg-zinc-700',
   secondaryLight: 'bg-zinc-700/50 hover:bg-zinc-700',
 }
 

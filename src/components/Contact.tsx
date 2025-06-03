@@ -1,20 +1,18 @@
 import { cn } from '@/lib/utils'
-import Link from './Link'
+import Link from 'next/link'
 
 const Contact = () => {
   return (
     <div className={cn('mt-32')}>
       <h2 className={cn('text-3xl font-semibold')}>Contact me</h2>
-      <p className={cn('mt-5')}>
-        To contact me you can use this email -{' '}
+      <div className={cn('bg-neutral-800 p-5 rounded-md mt-5')}>
         <Link
           className={cn('text-orange-500 underline')}
-          href='mailto:me@alexf0x.dev'
-          external
+          href='mailto:alexf0x@alexf0x.dev'
         >
-          me@alexf0x.dev
+          contact@alexf0x.dev
         </Link>
-      </p>
+      </div>
     </div>
   )
 }

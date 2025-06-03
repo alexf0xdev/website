@@ -1,4 +1,3 @@
-import Contact from '@/components/Contact'
 import Hero from '@/components/Hero'
 import ListeningNow from '@/components/ListeningNow'
 import Projects from '@/components/Projects'
@@ -20,7 +19,6 @@ const Home = async () => {
       <Skills />
       <ListeningNow initialCurrentlyPlaying={currentlyPlaying} />
       <Projects repositories={repositories} />
-      <Contact />
     </>
   )
 }

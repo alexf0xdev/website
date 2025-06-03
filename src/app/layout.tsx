@@ -12,7 +12,7 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'AlexF0x - main page',
+    default: 'AlexF0x',
     template: '%s - AlexF0x',
   },
   description: 'Personal website',
@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang='en'>
       <body
         className={cn(
-          'bg-zinc-900 text-white text-lg antialiased',
+          'bg-neutral-900 text-white text-lg antialiased',
           jetBrainsMono.className,
         )}
       >

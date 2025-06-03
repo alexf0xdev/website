@@ -12,7 +12,7 @@ interface IProjectCard {
 
 const ProjectCard: FC<IProjectCard> = ({ repository, languageColors }) => {
   return (
-    <div className={cn('bg-zinc-800 p-5 rounded-md')}>
+    <div className={cn('bg-neutral-800 p-5 rounded-md')}>
       <h3 className={cn('text-2xl font-semibold')}>{repository.name}</h3>
       {repository.description && <p>{repository.description}</p>}
       <div className={cn('flex gap-4 mt-2')}>

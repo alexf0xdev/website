@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer
       className={cn(
-        'bg-zinc-800/50 flex flex-col-reverse sm:flex-row sm:items-center justify-between p-5 mt-10 w-full rounded-t-md',
+        'flex flex-col-reverse sm:flex-row sm:items-center justify-between mt-10 mb-5 w-full',
       )}
     >
       <div className={cn('mt-2 sm:mt-0')}>

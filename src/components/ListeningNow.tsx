@@ -19,7 +19,7 @@ const ListeningNow = ({
   if (!currentlyPlaying) return null
 
   return (
-    <div className={cn('relative bg-zinc-800 p-5 mt-10 rounded-md')}>
+    <div className={cn('relative bg-neutral-800 p-5 mt-10 rounded-md')}>
       <h2 className={cn('text-2xl font-semibold')}>I&apos;m listening now:</h2>
       <div className={cn('flex items-center gap-5 mt-2')}>
         <div className='relative h-12 sm:h-15 w-12 sm:w-15'>
