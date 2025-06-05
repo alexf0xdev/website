@@ -24,7 +24,7 @@ const ListeningNow = ({
       <div className={cn('flex items-center gap-5 mt-2')}>
         <div className='relative h-12 sm:h-15 w-12 sm:w-15'>
           <Image
-            className={cn('bg-zinc-700/50 rounded-sm object-cover')}
+            className={cn('bg-neutral-700/50 rounded-sm object-cover')}
             src={currentlyPlaying.imageUrl}
             alt='Track image'
             fill

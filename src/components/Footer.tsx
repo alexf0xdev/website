@@ -20,7 +20,7 @@ const Footer = () => {
             here
           </Link>
         </p>
-        <p className={cn('text-zinc-400 text-base')}>
+        <p className={cn('text-neutral-400 text-base')}>
           &copy; AlexF0x, {new Date().getFullYear()}
         </p>
       </div>
@@ -28,7 +28,7 @@ const Footer = () => {
         <li>
           <Link
             className={cn(
-              'flex bg-zinc-700/50 p-2 rounded-sm hover:bg-zinc-700',
+              'flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700',
             )}
             href='https://github.com/alexf0xdev'
             external
@@ -39,7 +39,7 @@ const Footer = () => {
         <li>
           <Link
             className={cn(
-              'flex bg-zinc-700/50 p-2 rounded-sm hover:bg-zinc-700',
+              'flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700',
             )}
             href='https://t.me/alexf0xdev'
             external
@@ -50,7 +50,7 @@ const Footer = () => {
         <li>
           <Link
             className={cn(
-              'flex bg-zinc-700/50 p-2 rounded-sm hover:bg-zinc-700',
+              'flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700',
             )}
             href='https://x.com/alexf0xdev'
             external
@@ -61,7 +61,7 @@ const Footer = () => {
         <li>
           <Link
             className={cn(
-              'flex bg-zinc-700/50 p-2 rounded-sm hover:bg-zinc-700',
+              'flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700',
             )}
             href='https://youtube.com/@alexf0xdev'
             external
