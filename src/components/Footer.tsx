@@ -19,9 +19,10 @@ const Footer = () => {
           >
             here
           </Link>
+          .
         </p>
         <p className={cn('text-neutral-400 text-base')}>
-          &copy; AlexF0x, {new Date().getFullYear()}
+          &copy; AlexF0x, {new Date().getFullYear()}.
         </p>
       </div>
       <ul className={cn('flex gap-2')}>
