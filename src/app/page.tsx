@@ -13,6 +13,7 @@ const Home = async () => {
     getCurrentlyPlaying(),
     getRepositories(),
   ])
+
   return (
     <>
       <Hero />

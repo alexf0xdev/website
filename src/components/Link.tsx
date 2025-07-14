@@ -8,15 +8,20 @@ interface ILink {
   children: ReactNode
 }
 
-const Link: FC<ILink> = ({ className, href, external, children }) => (
-  <NextLink
-    className={className}
-    href={href}
-    target={external ? '_blank' : '_self'}
-    scroll={false}
-  >
-    {children}
-  </NextLink>
-)
+const Link: FC<ILink> = ({ className, href, children }) => {
+  const isExternal = href.startsWith('https://')
+
+  return (
+    <NextLink
+      className={className}
+      href={href}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'nofollow' : undefined}
+      scroll={false}
+    >
+      {children}
+    </NextLink>
+  )
+}
 
 export default Link
