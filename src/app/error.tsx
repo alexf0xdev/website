@@ -2,7 +2,6 @@
 
 import Button from '@/components/Button'
 import { cn } from '@/lib/utils'
-import { useRouter } from 'next/navigation'
 
 interface IError {
   error: Error
@@ -10,8 +9,6 @@ interface IError {
 }
 
 const Error = ({ reset }: IError) => {
-  const router = useRouter()
-
   return (
     <div
       className={cn(
