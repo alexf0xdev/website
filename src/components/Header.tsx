@@ -12,9 +12,7 @@ const Header = () => {
           <Link href='/'>Home</Link>
         </li>
         <li>
-          <Link href='https://github.com/alexf0xdev' external>
-            GitHub
-          </Link>
+          <Link href='https://github.com/alexf0xdev'>GitHub</Link>
         </li>
       </ul>
     </header>

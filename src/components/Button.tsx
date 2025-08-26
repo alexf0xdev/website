@@ -7,7 +7,6 @@ interface IButton {
   size?: 'base'
   variant?: 'primary' | 'secondary' | 'secondaryLight'
   href?: string
-  external?: boolean
   fullSize?: boolean
   className?: string
   type?: 'submit' | 'reset' | 'button'
@@ -30,7 +29,6 @@ const Button: FC<IButton> = ({
   size = 'base',
   variant = 'primary',
   href,
-  external,
   fullSize,
   className: otherClassName,
   type = 'button',
@@ -51,7 +49,7 @@ const Button: FC<IButton> = ({
 
   if (href) {
     return (
-      <Link className={className} href={href} external={external}>
+      <Link className={className} href={href}>
         {icon}
         {children}
       </Link>

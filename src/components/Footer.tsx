@@ -15,7 +15,6 @@ const Footer = () => {
           <Link
             className={cn('text-orange-500 underline')}
             href='https://github.com/alexf0xdev/website'
-            external
           >
             here
           </Link>
@@ -30,7 +29,6 @@ const Footer = () => {
           <Link
             className={cn('flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700')}
             href='https://github.com/alexf0xdev'
-            external
           >
             <FaGithub className={cn('w-6 h-6')} />
           </Link>
@@ -39,7 +37,6 @@ const Footer = () => {
           <Link
             className={cn('flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700')}
             href='https://t.me/alexf0xdev'
-            external
           >
             <FaTelegram className={cn('w-6 h-6')} />
           </Link>
@@ -48,7 +45,6 @@ const Footer = () => {
           <Link
             className={cn('flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700')}
             href='https://x.com/alexf0xdev'
-            external
           >
             <FaXTwitter className={cn('w-6 h-6')} />
           </Link>
@@ -57,7 +53,6 @@ const Footer = () => {
           <Link
             className={cn('flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700')}
             href='https://youtube.com/@alexf0xdev'
-            external
           >
             <FaYoutube className={cn('w-6 h-6')} />
           </Link>

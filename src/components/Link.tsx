@@ -4,7 +4,6 @@ import { FC, ReactNode } from 'react'
 interface ILink {
   className?: string
   href: string
-  external?: boolean
   children: ReactNode
 }
 
