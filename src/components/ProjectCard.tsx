@@ -39,12 +39,7 @@ const ProjectCard: FC<IProjectCard> = ({ repository, languageColors }) => {
         </div>
       </div>
       <div className={cn('flex flex-col sm:flex-row gap-2 mt-3')}>
-        <Button
-          icon={FaGithub}
-          className='rounded-sm'
-          href={repository.url}
-          external
-        >
+        <Button icon={FaGithub} className='rounded-sm' href={repository.url} external>
           View on GitHub
         </Button>
         {repository.homepage && (

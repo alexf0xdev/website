@@ -26,14 +26,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={cn(
-          'bg-neutral-900 text-white text-lg antialiased',
-          jetBrainsMono.className,
-        )}
+        className={cn('bg-neutral-900 text-white text-lg antialiased', jetBrainsMono.className)}
       >
-        <div
-          className={cn('flex flex-col min-h-screen max-w-4xl mx-auto px-5')}
-        >
+        <div className={cn('flex flex-col min-h-screen max-w-4xl mx-auto px-5')}>
           <Header />
           <main className={cn('flex-1')}>{children}</main>
           <Footer />

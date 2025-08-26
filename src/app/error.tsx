@@ -10,11 +10,7 @@ interface IError {
 
 const Error = ({ reset }: IError) => {
   return (
-    <div
-      className={cn(
-        'flex items-center justify-between min-h-[calc(100vh-240px)]',
-      )}
-    >
+    <div className={cn('flex items-center justify-between min-h-[calc(100vh-240px)]')}>
       <div>
         <h1 className={cn('text-5xl font-semibold')}>Something went wrong</h1>
         <p className={cn('mt-5')}>There was some kind of error, it happens.</p>

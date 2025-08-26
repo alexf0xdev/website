@@ -28,9 +28,7 @@ const Footer = () => {
       <ul className={cn('flex gap-2')}>
         <li>
           <Link
-            className={cn(
-              'flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700',
-            )}
+            className={cn('flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700')}
             href='https://github.com/alexf0xdev'
             external
           >
@@ -39,9 +37,7 @@ const Footer = () => {
         </li>
         <li>
           <Link
-            className={cn(
-              'flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700',
-            )}
+            className={cn('flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700')}
             href='https://t.me/alexf0xdev'
             external
           >
@@ -50,9 +46,7 @@ const Footer = () => {
         </li>
         <li>
           <Link
-            className={cn(
-              'flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700',
-            )}
+            className={cn('flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700')}
             href='https://x.com/alexf0xdev'
             external
           >
@@ -61,9 +55,7 @@ const Footer = () => {
         </li>
         <li>
           <Link
-            className={cn(
-              'flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700',
-            )}
+            className={cn('flex bg-neutral-700/50 p-2 rounded-sm hover:bg-neutral-700')}
             href='https://youtube.com/@alexf0xdev'
             external
           >

@@ -8,18 +8,11 @@ export const metadata: Metadata = {
 
 const NotFound = () => {
   return (
-    <div
-      className={cn(
-        'flex items-center justify-between min-h-[calc(100vh-240px)]',
-      )}
-    >
+    <div className={cn('flex items-center justify-between min-h-[calc(100vh-240px)]')}>
       <div>
-        <h1 className={cn('text-5xl font-semibold')}>
-          There&apos;s nothing here
-        </h1>
+        <h1 className={cn('text-5xl font-semibold')}>There&apos;s nothing here</h1>
         <p className={cn('mt-5')}>
-          The page you were looking for appears to be in a different location or
-          is unavailable.
+          The page you were looking for appears to be in a different location or is unavailable.
         </p>
         <div className={cn('flex flex-col sm:flex-row mt-10')}>
           <Button href='/'>Back from vacation</Button>

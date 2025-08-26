@@ -2,10 +2,9 @@ import { ILanguageColor, IRepository } from '@/types/github'
 import axios from 'axios'
 
 export const getRepositories = async (): Promise<IRepository[]> => {
-  const { data } = await axios.get(
-    `https://api.github.com/users/alexf0xdev/repos`,
-    { headers: { Authorization: `Bearer ${process.env.GITHUB_API_KEY}` } },
-  )
+  const { data } = await axios.get('https://api.github.com/users/alexf0xdev/repos', {
+    headers: { Authorization: `Bearer ${process.env.GITHUB_API_KEY}` },
+  })
 
   return data.map((item: any) => ({
     name: item.name,
@@ -19,9 +18,7 @@ export const getRepositories = async (): Promise<IRepository[]> => {
   }))
 }
 
-export const getLanguageColors = async (): Promise<
-  Record<string, ILanguageColor>
-> => {
+export const getLanguageColors = async (): Promise<Record<string, ILanguageColor>> => {
   const { data } = await axios.get(
     'https://raw.githubusercontent.com/ozh/github-colors/master/colors.json',
   )

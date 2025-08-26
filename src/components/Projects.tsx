@@ -18,17 +18,11 @@ const Projects = ({ repositories }: { repositories: IRepository[] }) => {
             .filter((repository) => !repository.fork)
             .sort((a, b) => b.starsCount - a.starsCount)
             .map((repository, index) => (
-              <ProjectCard
-                key={index}
-                repository={repository}
-                languageColors={languageColors}
-              />
+              <ProjectCard key={index} repository={repository} languageColors={languageColors} />
             ))}
         </div>
       ) : (
-        <p className={cn('mt-5')}>
-          I don&apos;t have any open projects at the moment.
-        </p>
+        <p className={cn('mt-5')}>I don&apos;t have any open projects at the moment.</p>
       )}
     </div>
   )
