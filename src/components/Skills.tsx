@@ -38,7 +38,7 @@ const Skills = () => {
           imageUrl: '/tailwind.svg',
         },
       ].map((skill, index) => (
-        <SkillCard key={index} skill={skill} />
+        <SkillCard key={index} {...skill} />
       ))}
     </ul>
   )

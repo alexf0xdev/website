@@ -1,14 +1,15 @@
 import Image from 'next/image'
+import { FC } from 'react'
 
 interface ISkill {
   name: string
   imageUrl: string
 }
 
-const SkillCard = ({ skill }: { skill: ISkill }) => {
+const SkillCard: FC<ISkill> = ({ name, imageUrl }) => {
   return (
     <li>
-      <Image src={skill.imageUrl} width={50} height={50} alt={skill.name} />
+      <Image src={imageUrl} width={50} height={50} alt={name} />
     </li>
   )
 }
