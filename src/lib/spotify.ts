@@ -2,7 +2,7 @@ import { ICurrentlyPlaying } from '@/types/spotify'
 import axios from 'axios'
 
 export const getAccessToken = async () => {
-  const basic = getBasicToken()
+  const basicToken = getBasicToken()
 
   const { data } = await axios.post(
     'https://accounts.spotify.com/api/token',
@@ -13,7 +13,7 @@ export const getAccessToken = async () => {
     {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
-        Authorization: `Basic ${basic}`,
+        Authorization: `Basic ${basicToken}`,
       },
     },
   )
