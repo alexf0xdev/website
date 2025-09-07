@@ -1,6 +1,4 @@
-import { cn } from '@/lib/utils'
-import { FC, ReactNode } from 'react'
-import { IconType } from 'react-icons'
+import clsx from 'clsx'
 import Link from './Link'
 
 interface IButton {
@@ -11,8 +9,8 @@ interface IButton {
   className?: string
   type?: 'submit' | 'reset' | 'button'
   onClick?: () => void
-  icon?: IconType
-  children: ReactNode
+  icon?: React.ReactElement
+  children: React.ReactNode
 }
 
 const sizes = {
@@ -25,27 +23,25 @@ const variants = {
   secondaryLight: 'bg-neutral-700/50 hover:bg-neutral-700',
 }
 
-const Button: FC<IButton> = ({
+const Button: React.FC<IButton> = ({
   size = 'base',
   variant = 'primary',
   href,
   fullSize,
-  className: otherClassName,
+  className: _className,
   type = 'button',
   onClick,
-  icon: Icon,
+  icon,
   children,
 }) => {
-  const className = cn(
+  const className = clsx(
     'flex justify-center font-medium cursor-pointer rounded-md',
     fullSize && 'w-full',
-    Icon && 'items-center gap-2',
+    icon && 'items-center gap-2',
     variants[variant],
     sizes[size],
-    otherClassName,
+    _className,
   )
-
-  const icon = Icon && <Icon className={cn('w-5 h-5')} />
 
   if (href) {
     return (

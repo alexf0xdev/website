@@ -1,7 +1,6 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import ScrollTop from '@/components/ScrollTop'
-import { cn } from '@/lib/utils'
+import clsx from 'clsx'
 import type { Metadata } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
@@ -26,14 +25,13 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={cn('bg-neutral-900 text-white text-lg antialiased', jetBrainsMono.className)}
+        className={clsx('bg-neutral-900 text-white text-lg antialiased', jetBrainsMono.className)}
       >
-        <div className={cn('flex flex-col min-h-screen max-w-4xl mx-auto px-5')}>
+        <div className={clsx('flex flex-col min-h-screen max-w-4xl mx-auto px-5')}>
           <Header />
-          <main className={cn('flex-1')}>{children}</main>
+          <main className={clsx('flex-1')}>{children}</main>
           <Footer />
         </div>
-        <ScrollTop />
       </body>
     </html>
   )

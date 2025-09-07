@@ -1,9 +1,9 @@
-import { cn } from '@/lib/utils'
+import clsx from 'clsx'
 import SkillCard from './SkillCard'
 
 const Skills = () => {
   return (
-    <ul className={cn('flex justify-between gap-5 mt-10')}>
+    <ul className={clsx('flex justify-between gap-5 mt-10')}>
       {[
         {
           name: 'JavaScript',
