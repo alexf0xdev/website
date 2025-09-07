@@ -1,6 +1,5 @@
 import { ILanguageColor, IRepository } from '@/types/github'
 import clsx from 'clsx'
-import { FC } from 'react'
 import { TbBrandGithub, TbGitFork, TbLink, TbStar } from 'react-icons/tb'
 import Button from './Button'
 
@@ -9,7 +8,7 @@ interface IProjectCard {
   languageColors: Record<string, ILanguageColor> | undefined
 }
 
-const ProjectCard: FC<IProjectCard> = ({ repository, languageColors }) => {
+const ProjectCard: React.FC<IProjectCard> = ({ repository, languageColors }) => {
   return (
     <div className={clsx('bg-neutral-800 p-5 rounded-md')}>
       <h3 className={clsx('text-2xl font-semibold')}>{repository.name}</h3>

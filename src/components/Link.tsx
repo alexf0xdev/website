@@ -1,13 +1,12 @@
 import NextLink from 'next/link'
-import { FC, ReactNode } from 'react'
 
 interface ILink {
   className?: string
   href: string
-  children: ReactNode
+  children: React.ReactNode
 }
 
-const Link: FC<ILink> = ({ className, href, children }) => {
+const Link: React.FC<ILink> = ({ className, href, children }) => {
   const isExternal = href.startsWith('https://')
 
   return (
