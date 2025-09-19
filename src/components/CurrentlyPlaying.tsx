@@ -11,10 +11,14 @@ const CurrentlyPlaying = ({
 }: {
   currentlyPlaying: ICurrentlyPlaying | null
 }) => {
-  const { data: currentlyPlaying } = useSWR<ICurrentlyPlaying>('/api/currently-playing', fetcher, {
-    refreshInterval: 1000,
-    fallbackData: _currentlyPlaying!,
-  })
+  const { data: currentlyPlaying } = useSWR<ICurrentlyPlaying | null>(
+    '/api/currently-playing',
+    fetcher,
+    {
+      refreshInterval: 1000,
+      fallbackData: _currentlyPlaying!,
+    },
+  )
 
   if (!currentlyPlaying) return null
 

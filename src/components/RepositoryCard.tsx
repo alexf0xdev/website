@@ -5,10 +5,10 @@ import Button from './Button'
 
 interface IProjectCard {
   repository: IRepository
-  languageColors: Record<string, ILanguageColor> | undefined
+  languageColor: ILanguageColor | undefined
 }
 
-const ProjectCard: React.FC<IProjectCard> = ({ repository, languageColors }) => {
+const RepositoryCard: React.FC<IProjectCard> = ({ repository, languageColor }) => {
   return (
     <div className={clsx('bg-neutral-800 p-5 rounded-md')}>
       <h3 className={clsx('text-2xl font-semibold')}>{repository.name}</h3>
@@ -19,9 +19,7 @@ const ProjectCard: React.FC<IProjectCard> = ({ repository, languageColors }) => 
             <div
               className={clsx('w-3 h-3 rounded-full')}
               style={{
-                backgroundColor: languageColors
-                  ? languageColors[repository.language].color
-                  : '#ffffff',
+                backgroundColor: languageColor ? languageColor.color : '#ffffff',
               }}
             />
             {repository.language}
@@ -59,4 +57,4 @@ const ProjectCard: React.FC<IProjectCard> = ({ repository, languageColors }) => 
   )
 }
 
-export default ProjectCard
+export default RepositoryCard

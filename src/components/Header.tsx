@@ -1,3 +1,4 @@
+import { NAV_LINKS } from '@/lib/constants'
 import clsx from 'clsx'
 import Link from './Link'
 
@@ -8,12 +9,11 @@ const Header = () => {
         AlexF0x
       </Link>
       <ul className={clsx('flex gap-5')}>
-        <li>
-          <Link href='/'>Home</Link>
-        </li>
-        <li>
-          <Link href='https://github.com/alexf0xdev'>GitHub</Link>
-        </li>
+        {NAV_LINKS.map((link, index) => (
+          <li key={index}>
+            <Link href={link.href}>{link.name}</Link>
+          </li>
+        ))}
       </ul>
     </header>
   )

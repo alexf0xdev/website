@@ -1,44 +1,14 @@
+import { SKILLS } from '@/lib/constants'
 import clsx from 'clsx'
-import SkillCard from './SkillCard'
+import Image from 'next/image'
 
 const Skills = () => {
   return (
     <ul className={clsx('flex justify-between gap-5 mt-10')}>
-      {[
-        {
-          name: 'JavaScript',
-          imageUrl: '/javascript.svg',
-        },
-        {
-          name: 'TypeScript',
-          imageUrl: '/typescript.svg',
-        },
-        {
-          name: 'Nest.js',
-          imageUrl: '/nestjs.svg',
-        },
-        {
-          name: 'HTML',
-          imageUrl: '/html5.svg',
-        },
-        {
-          name: 'React',
-          imageUrl: '/react.svg',
-        },
-        {
-          name: 'Vue',
-          imageUrl: '/vue.svg',
-        },
-        {
-          name: 'CSS',
-          imageUrl: '/css3.svg',
-        },
-        {
-          name: 'Tailwind',
-          imageUrl: '/tailwind.svg',
-        },
-      ].map((skill, index) => (
-        <SkillCard key={index} {...skill} />
+      {SKILLS.map((skill, index) => (
+        <li key={index}>
+          <Image src={skill.imageUrl} width={50} height={50} alt={skill.name} />
+        </li>
       ))}
     </ul>
   )

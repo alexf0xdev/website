@@ -1,6 +1,6 @@
 import CurrentlyPlaying from '@/components/CurrentlyPlaying'
 import Hero from '@/components/Hero'
-import Projects from '@/components/Projects'
+import Repositories from '@/components/Repositories'
 import Skills from '@/components/Skills'
 import { getRepositories } from '@/lib/github'
 import { getCurrentlyPlaying } from '@/lib/spotify'
@@ -16,7 +16,7 @@ const Home = async () => {
       <Hero />
       <Skills />
       <CurrentlyPlaying currentlyPlaying={currentlyPlaying} />
-      <Projects repositories={repositories} />
+      <Repositories repositories={repositories} />
     </>
   )
 }
