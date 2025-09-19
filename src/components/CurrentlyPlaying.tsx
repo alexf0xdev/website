@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import useSWR from 'swr'
 
-const ListeningNow = ({
+const CurrentlyPlaying = ({
   currentlyPlaying: _currentlyPlaying,
 }: {
   currentlyPlaying: ICurrentlyPlaying | null
@@ -58,4 +58,4 @@ const ListeningNow = ({
   )
 }
 
-export default ListeningNow
+export default CurrentlyPlaying
